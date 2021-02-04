@@ -1,0 +1,17 @@
+server:
+  port: 7000
+  
+zuul:
+  ignored-services: '*'
+  routes:
+    cursos-service:
+      path: /servcursos/
+      serviceId: cursos-service
+    empleados-service:
+      path: /servempleados/
+      serviceId: empleados-service 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka 
